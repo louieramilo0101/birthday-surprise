@@ -331,48 +331,30 @@
                  0 0 40px rgba(120, 115, 245, 0.7);
   }
 }
-
-
-/* --- New Main Title Style (with moving glow) --- */
+/* --- New Main Title Style (REMOVED LAGGY ANIMATIONS) --- */
 .happy {
   font-family: "Pacifico", cursive;
   font-size: 4rem;
   font-weight: normal;
   text-align: center;
   
-  /* The gradient text - I added the pink at the end to make the loop seamless */
-  background: linear-gradient(90deg, #ff6ec4, #7873f5, #4ade80, #ff6ec4);
+  /* The gradient text - now static and fast */
+  background: linear-gradient(90deg, #ff6ec4, #7873f5, #4ade80);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   
-  /* Make the background 4x wider to animate it */
-  background-size: 400% 400%;
-  
-  /* We're combining TWO animations! */
-  animation: 
-    animated-gradient-text 4s ease infinite,  /* This makes the light "go through" */
-    text-glow-pulse 2s ease-in-out infinite; /* This makes the "outline glow" */
+  /* A simple, non-animated glow that is fast */
+  text-shadow: 0 0 15px rgba(255, 110, 196, 0.5),
+               0 0 25px rgba(120, 115, 245, 0.4);
            
   margin: 30px 0 20px 0;
   position: relative;
-  /* The display: inline-block and z-index: 1 lines are now gone */
+  
+  /* Removed the display:inline-block and z-index to fix centering */
 }
 
-/* Make it look good on mobile, too */
-@media (max-width: 768px) {
-  .happy {
-    font-size: 3rem;
-  }
-}
 
-@media (max-width: 480px) {
-  .happy {
-    font-size: 2.5rem;
-    line-height: 1.3;
-  }
-}
-/* --- Add this new animation --- */
-
+/* --- New Main Title Style (with moving glow) --- */
   </style>
 
 </head>
@@ -708,5 +690,4 @@
 
   <script src="script.js"></script>
 </body>
-
 </html>
