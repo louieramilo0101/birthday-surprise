@@ -332,6 +332,7 @@
   }
 }
 
+
 /* --- New Main Title Style (with moving glow) --- */
 .happy {
   font-family: "Pacifico", cursive;
@@ -347,16 +348,14 @@
   /* Make the background 4x wider to animate it */
   background-size: 400% 400%;
   
-  /* NEW: We're combining TWO animations! */
+  /* We're combining TWO animations! */
   animation: 
     animated-gradient-text 4s ease infinite,  /* This makes the light "go through" */
     text-glow-pulse 2s ease-in-out infinite; /* This makes the "outline glow" */
            
   margin: 30px 0 20px 0;
-
-  display: inline-block; /* Makes the glow wrap the text, not the whole line */
-  z-index: 1;             /* Puts the text above the new glow */
   position: relative;
+  /* The display: inline-block and z-index: 1 lines are now gone */
 }
 
 /* Make it look good on mobile, too */
@@ -378,35 +377,6 @@
   100% { transform: rotate(360deg); }
 }
 /* --- Add this new rule for the spinning glow --- */
-.happy::before {
-  content: '';
-  position: absolute;
-  z-index: -1; /* Puts it behind the text */
-  
-  /* Make it slightly larger than the text block */
-  top: -10px; 
-  left: -10px;
-  right: -10px;
-  bottom: -10px;
-  
-  /* The spinning gradient from your button */
-  background: conic-gradient(
-      from 0deg at 50% 50%,
-      transparent 0%,
-      transparent 70%,
-      #ff6ec4 90%, 
-      #7873f5 100%
-  );
-  
-  /* Apply the spinning animation */
-  animation: spin-glow 3s linear infinite;
-  
-  /* Make it a soft glow */
-  filter: blur(20px);
-  
-  /* Make the glow's shape rounded */
-  border-radius: 25px;
-}
   </style>
 
 </head>
