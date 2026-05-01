@@ -354,6 +354,33 @@
 }
 
 
+
+.occasion-banner {
+  max-width: 760px;
+  margin: 20px auto 28px;
+  padding: 18px 24px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.72);
+  border: 1px solid rgba(255, 110, 196, 0.35);
+  box-shadow: 0 8px 24px rgba(120, 115, 245, 0.15);
+}
+
+.occasion-banner h2 {
+  margin: 0 0 8px;
+  font-family: "Poppins", sans-serif;
+  color: #6f2a8a;
+  font-size: 1.7rem;
+  text-indent: 0;
+  animation: none;
+}
+
+.occasion-banner p {
+  margin: 6px 0;
+  color: #5f4a73;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
 /* --- New Main Title Style (with moving glow) --- */
   </style>
 
@@ -366,7 +393,13 @@
   <h1 class="happy">HAPPY BIRTHDAY MY LOVE!</h1>
   <h3 class="subhappy">19thX10th</h3>
   <hr>
-  
+
+  <section class="occasion-banner" aria-live="polite">
+    <h2 id="occasionTitle">Celebrating Us, Always</h2>
+    <p id="occasionSubtitle">A little corner of our story, made with love.</p>
+    <p id="occasionMessage"></p>
+  </section>
+
   <div class="music">
     <audio id="bg-music" src="sounds/wave to earth - love. (lyrics).mp3" loop></audio>
   </div>
